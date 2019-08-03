@@ -24,7 +24,6 @@ function Chains(val::Vector{Vector{A}},
         evidence = missing,
         info::NamedTuple=NamedTuple()
 ) where {A<:Union{Real, Union{Missing, Real}}}
-	println("It's working")
 	return Chains(Array(hcat(val...)'), parameter_names, name_map, start=start,
            thin=thin, evidence=evidence, info=info)
 end
